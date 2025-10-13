@@ -1,50 +1,75 @@
+import java.util.Scanner;
 
 public class Main {
-
-    /*
-         *Variable = a reusable container for a value
-         *Primitive = simple value stored directly in memory (stack)
-         *Reference = memory adress (stack) that points to the heap
-
-         Primitive  Vs  Reference
-          Int            String
-          Double         Array
-          Char           Object
-          Boolean
-
-    */
-
     public static void main(String[] args) {
-        int myAge = 5;
-        float myFloatNum = 5.99f;
-        char myLetter = 'D';
-        boolean myBool = true;
-        String myText = "Hello";
-        double myDoubleNum = 5.99d;
+        Scanner scanner = new Scanner(System.in);
 
-        // Déclaration float - doit avoir le suffixe 'f' ou 'F'
-        float prix = 19.99f;
-        float temperature = -5.5F;
+        try {
+            System.out.print("Enter the number of students: ");
+            int n = Integer.parseInt(scanner.nextLine());
 
-        // Déclaration double - suffixe 'd' optionnel
-        double salaire = 2500.50;
-        double distance = 123456.789d; // 'd' explicite
+            System.out.print("Enter teacher name: ");
+            String name = scanner.nextLine();
 
-        if(salaire<=distance ){
-            System.out.println("donc je dois augmenter le salaire " );
+            System.out.print("What is GPA: ");
+            double gpa = Double.parseDouble(scanner.nextLine());
+
+            System.out.print("Are you student: ");
+            boolean isStudent = scanner.nextBoolean();
+
+            System.out.println("\n--- Summary ---");
+            System.out.println("Number of students: " + n);
+            System.out.println("Teacher name: " + name);
+            System.out.println("GPA: " + gpa);
+
+            if(isStudent){
+                System.out.println("You are a student");
+            }
+            else{
+                System.out.println("You are employe");
+            }
+
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Please enter valid numbers!");
+        } finally {
+            scanner.close();
         }
-        else{
-            System.out.println("donc je dois moinder la distance ");
-        }
-        // CORRECTIONS des affichages :
-        System.out.println("myDoubleNum = " + myDoubleNum + "\n");
-        System.out.println("myAge = " + myAge + " | myFloatNum = " + myFloatNum +
-                " | myLetter = " + myLetter + " | myText = " + myText + "\n");
-
-        final int MINUTES_PER_HOUR = 60;
-        final int BIRTHYEAR = 1980;
-
-        System.out.println(MINUTES_PER_HOUR);
-        System.out.println(BIRTHYEAR);
     }
+
+
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        try {
+//            System.out.print("Enter the number of students: ");
+//            int n = scanner.nextInt();
+//
+//            scanner.nextLine();
+//
+//            System.out.print("Enter teacher name: ");
+//            String name = scanner.nextLine();
+//
+//
+//            System.out.print("What is GPA: ");
+//            double gpa = scanner.nextDouble();
+//
+//            scanner.nextLine();
+//
+//            System.out.print("Are you student: ");
+//            boolean isStudent = scanner.nextBoolean();
+//
+//            scanner.nextLine();
+//
+//            System.out.println("\n--- Summary ---");
+//            System.out.println("Number of students: " + n);
+//            System.out.println("Teacher name: " + name);
+//            System.out.println("GPA: " + gpa);
+//            System.out.println("Student: " + isStudent);
+//
+//        } catch (NumberFormatException e) {
+//            System.out.println("Error: Please enter valid numbers!");
+//        } finally {
+//            scanner.close();
+//        }
+//    }
 }
