@@ -2,44 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        //Arithmitic
 
-        String adjective1 ;
-        String noun1 ; // Correction: "height" au lieu de "hieght"
-        String adjective2 ;
-        String verb1 ; // Correction: "height" au lieu de "hieght"
-        String adjective3 ;
+        int x=10;
+        int y=20;
+        float z;
 
         try {
-            System.out.print("Enter an adjective (description): ");
-            adjective1 = scanner.nextLine();
-
-            System.out.print("Enter an noun (animal or person): ");
-            noun1 = scanner.nextLine();
-
-            System.out.print("Enter an adjective (description): ");
-            adjective2 = scanner.nextLine();
-
-            System.out.print("Enter an verb finish by ing: ");
-            verb1 = scanner.nextLine();
-
-            System.out.print("Enter the adjective: ");
-            adjective3 = scanner.nextLine();
-
-
-
-
-            System.out.println("--- Summary ---");
-            System.out.println("Today i want to a :" +adjective1+ "zoo");
-            System.out.println("In an exhibit, I saw a :"+noun1+".");
-            System.out.println(noun1+"was :"+adjective2+"and"+verb1+"!");
-            System.out.println("I was :"+ adjective3 +"!");
-
-
+//            z=x + y;
+//            z=x % y;
+//            x+=y;
+//            x++;
+//            x=y % x;
+            double result = 3+7.4 *(73*6-90)/8+2-4%45;
+            System.out.println(result);
+//            System.out.println(x);
         } catch (NumberFormatException e) {
             System.out.println("Error: Please enter valid numbers!");
         } finally {
-            scanner.close();
+            System.out.println("All right");
         }
     }
 
