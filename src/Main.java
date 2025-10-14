@@ -4,30 +4,23 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        double width = 0;
+        double height = 0; // Correction: "height" au lieu de "hieght"
+        double area = 0;
+
         try {
-            System.out.print("Enter the number of students: ");
-            int n = Integer.parseInt(scanner.nextLine());
+            System.out.print("Enter the width: ");
+            width = Double.parseDouble(scanner.nextLine());
 
-            System.out.print("Enter teacher name: ");
-            String name = scanner.nextLine();
+            System.out.print("Enter the hieght: ");
+            height = Double.parseDouble(scanner.nextLine());
 
-            System.out.print("What is GPA: ");
-            double gpa = Double.parseDouble(scanner.nextLine());
+            area = (width * height);
 
-            System.out.print("Are you student: ");
-            boolean isStudent = scanner.nextBoolean();
-
-            System.out.println("\n--- Summary ---");
-            System.out.println("Number of students: " + n);
-            System.out.println("Teacher name: " + name);
-            System.out.println("GPA: " + gpa);
-
-            if(isStudent){
-                System.out.println("You are a student");
-            }
-            else{
-                System.out.println("You are employe");
-            }
+            System.out.println("--- Summary ---");
+            System.out.println("the width is :"+width);
+            System.out.println("the hieght is :"+height);
+            System.out.println("the area is :"+area+"cm^2");
 
         } catch (NumberFormatException e) {
             System.out.println("Error: Please enter valid numbers!");
@@ -37,39 +30,4 @@ public class Main {
     }
 
 
-//    public static void main(String[] args) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        try {
-//            System.out.print("Enter the number of students: ");
-//            int n = scanner.nextInt();
-//
-//            scanner.nextLine();
-//
-//            System.out.print("Enter teacher name: ");
-//            String name = scanner.nextLine();
-//
-//
-//            System.out.print("What is GPA: ");
-//            double gpa = scanner.nextDouble();
-//
-//            scanner.nextLine();
-//
-//            System.out.print("Are you student: ");
-//            boolean isStudent = scanner.nextBoolean();
-//
-//            scanner.nextLine();
-//
-//            System.out.println("\n--- Summary ---");
-//            System.out.println("Number of students: " + n);
-//            System.out.println("Teacher name: " + name);
-//            System.out.println("GPA: " + gpa);
-//            System.out.println("Student: " + isStudent);
-//
-//        } catch (NumberFormatException e) {
-//            System.out.println("Error: Please enter valid numbers!");
-//        } finally {
-//            scanner.close();
-//        }
-//    }
 }
