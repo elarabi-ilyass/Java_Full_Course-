@@ -5,29 +5,34 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        double a;
-        double b;
-        double z;
-        double result;
+        String name="Spongebob";
+        char firstLetter = name.charAt(0);
+        int age=67;
+        double result=88.9;
+        boolean isEmployed=true;
+
+        double salar1=9.99;
+        double salar2=100.15;
+        double salar3=-45.01;
+
 
         try {
-            System.out.print(" Enter the first number: ");
-            a = sc.nextDouble();
-            System.out.print(" Enter the second number: ");
-            b = sc.nextDouble();
+            System.out.printf(" Enter the  first number %s\n ",name);
+            System.out.printf(" Your name   is first letter of %c\n ",firstLetter);
+            System.out.printf(" You are %d years  old\n ",age);
+            System.out.printf(" You are %f inches  tall\n ",result);
 
-            z = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-//            result=Math.round(z);
-//            result=Math.abs(z);
-//            result=Math.ceil(z);
-//            result=Math.floor(z);
-//            result=Math.max(z,122);
-            result=Math.min(z,12);
-              System.out.println(Math.PI);
-              System.out.println(Math.E);
+            System.out.printf(" %s is %d   years old \n",name,age);
 
-            System.out.println("Result: " + z); // println pour meilleure lisibilité
-            System.out.println("Result: " + result); // println pour meilleure lisibilité
+//            System.out.printf("%.1f\n",salar1);
+//            System.out.printf("%.1f\n",salar2);
+//            System.out.printf("%.1f\n",salar3); number one display how much number before comma
+//            System.out.printf("%(.1f\n",salar1);
+//            System.out.printf("%(.1f\n",salar2);
+//            System.out.printf("%(.1f\n",salar3); if negative ()
+
+
+
 
         } catch (InputMismatchException e) { // Exception corrigée
             System.out.println(" Error: Please enter valid numbers!");
